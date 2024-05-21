@@ -32,6 +32,6 @@ annos <- c(2015, 2016, 2017, 2018, 2019, 2020)
 ggplot(data.frame(annos = rep(annos, length(data)), value = unlist(data), variable = rep(names(data), each = length(annos))), aes(x = annos, y = value, color = variable)) +
   geom_line(size = 1) +
   geom_point(size = 3) +
-  labs(x = "Año", y = "Valor del Indicador") +
+  labs(x = "year", y = "Valor del Indicador") +
   theme_bw() +
   theme(legend.position = "bottom")

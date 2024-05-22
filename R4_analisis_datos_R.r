@@ -27,9 +27,9 @@ for (llave in names(valores_suavi)) {
   cat(sprintf("%s para el 2020: %.2f\n", llave, valores_suavi[[llave]]))
 }
 
-annos <- c(2015, 2016, 2017, 2018, 2019, 2020)
+year <- c(2015, 2016, 2017, 2018, 2019, 2020)
 
-ggplot(data.frame(annos = rep(annos, length(data)), value = unlist(data), variable = rep(names(data), each = length(annos))), aes(x = annos, y = value, color = variable)) +
+ggplot(data.frame(year = rep(year, length(data)), value = unlist(data), variable = rep(names(data), each = length(year))), aes(x = year, y = value, color = variable)) +
   geom_line(size = 1) +
   geom_point(size = 3) +
   labs(x = "year", y = "Valor del Indicador") +
